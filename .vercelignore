@@ -1,0 +1,8 @@
+client/node_modules
+server/.venv
+server/venv
+server/data
+server/output
+output
+*.csv
+.env

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "other",
+  "installCommand": "cd client && npm install",
+  "buildCommand": "cd client && npm run build",
+  "outputDirectory": "client/dist",
+  "rewrites": [
+    { "source": "/health", "destination": "/api/index.py" },
+    { "source": "/stats", "destination": "/api/index.py" },
+    { "source": "/config", "destination": "/api/index.py" },
+    { "source": "/search", "destination": "/api/index.py" },
+    { "source": "/search-places", "destination": "/api/index.py" },
+    { "source": "/sessions/:path*", "destination": "/api/index.py" },
+    { "source": "/download/:path*", "destination": "/api/index.py" },
+    { "source": "/delete-session/:path*", "destination": "/api/index.py" },
+    { "source": "/clear-sessions", "destination": "/api/index.py" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
